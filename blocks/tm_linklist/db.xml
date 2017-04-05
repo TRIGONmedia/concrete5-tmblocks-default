@@ -1,0 +1,31 @@
+<?php xml version="1.0"?>
+<schema version="0.3">
+    <table name="btTmLinkList">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="cssClass" type="C"></field>
+        <field name="ignoreGrid" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+    </table>
+
+    <table name="btTmLinkListLinks">
+        <field name="iID" type="I">
+            <key/>
+            <unsigned/>
+            <autoincrement/>
+        </field>
+        <field name="bID" type="I">
+            <unsigned/>
+        </field>
+        <field name="link" type="X2"></field>
+        <field name="linktext" type="X2"></field>
+        <field name="sort" type="I"></field>
+        <field name="anchor" type="C" size="255"></field>
+
+    </table>
+
+</schema>

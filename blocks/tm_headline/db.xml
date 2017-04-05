@@ -1,0 +1,17 @@
+<?php xml version="1.0"?>
+<schema version="0.3">
+    <table name="btTmHeadline">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="headline" type="C" size="255"></field>
+        <field name="align" type="C" size="255"></field>
+        <field name="layer" type="C"></field>
+        <field name="cssClass" type="C"></field>
+        <field name="ignoreGrid" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+    </table>
+</schema>
