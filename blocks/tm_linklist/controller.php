@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\Tmblocks\Block\TmLinklist;
+namespace Concrete\Package\TmblocksDefault\Block\TmLinklist;
 
 defined("C5_EXECUTE") or die("Access Denied.");
 

@@ -10,15 +10,10 @@ use Page;
 use URL;
 use Concrete\Package\Tmblocks\Src\TmBlockController;
 use Concrete\Package\Tmblocks\Src\FieldTypes\BlockFieldTypeString;
-use Concrete\Package\Tmblocks\Src\FieldTypes\BlockFieldTypeImage;
-use Concrete\Package\Tmblocks\Src\FieldTypes\BlockFieldTypeRepeatable;
+use Concrete\Package\Tmblocks\Src\FieldTypes\BlockFieldTypeSelect;
 
 class Controller extends TmBlockController
 {
-
-  public $helpers = array(
-    0 => 'form',
-  );
 
   protected $btTable = 'btTmHeadline';
   protected $btDefaultSet = 'tmblocks-default';

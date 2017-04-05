@@ -32,22 +32,23 @@ class Controller extends Package
     return t("TRIGONmedia Default Blocks");
   }
 
-  private function installOrUpdateBlock($blockname)
+  protected function installOrUpdateBlock($blockname, $pkg)
   {
     $bt = BlockType::getByHandle($blockname);
     if (!is_object($bt)) {
-      BlockType::installBlockTypeFromPackage($blockname, $this);
+      BlockType::installBlockTypeFromPackage($blockname, $pkg);
     }
   }
 
-  private function installOrUpdateBlocks($pkg){
+  protected function installOrUpdateBlocks($pkg)
+  {
 
     if (!BlockTypeSet::getByHandle('tmblocks-default')) {
       BlockTypeSet::add('tmblocks-default', "TMBlocks Default", $pkg);
     }
 
-    $this->installOrUpdateBlock("tm_headline");
-    $this->installOrUpdateBlock("tm_linklist");
+    $this->installOrUpdateBlock("tm_headline", $pkg);
+    $this->installOrUpdateBlock("tm_linklist", $pkg);
   }
 
   public function install()
@@ -58,8 +59,8 @@ class Controller extends Package
 
   public function upgrade()
   {
-    $pkg = parent::upgrade();
-    $this->installOrUpdateBlocks($pkg);
+    parent::upgrade();
+    $this->installOrUpdateBlocks($this);
   }
 
 }
