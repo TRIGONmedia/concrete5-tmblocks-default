@@ -26,3 +26,7 @@ This packages provides some default blocks using https://github.com/farion/concr
   }
   ```
 4. run `composer install` (or `php composer.phar install`)
+
+## 2 Notes
+
+While these blocks working basically, they are thought as examples. In general the blocks produce HTML showing the appropriate content. But no CSS or JS is provided and left for you to add.
